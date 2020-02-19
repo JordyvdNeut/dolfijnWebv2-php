@@ -8,11 +8,10 @@ class HomeController
     $this->HomeModel = new HomeModel();
   }
 
-  public function collectHome()
+  public function homePage()
   {
-    include "view/home.php";
+    include "view/home/home.php";
   }
-
 
   public function __destruct()
   {

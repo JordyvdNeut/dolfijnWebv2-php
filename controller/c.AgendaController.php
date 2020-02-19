@@ -8,6 +8,10 @@ class AgendaController
     $this->AgendaModel = new AgendaModel();
   }
 
+  public function agendaPage()
+  {
+    include "view/agenda/agenda.php";
+  }
 
 
   public function __destruct()

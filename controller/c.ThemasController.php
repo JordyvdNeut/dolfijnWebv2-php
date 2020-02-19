@@ -8,7 +8,10 @@ class ThemasController
     $this->ThemasModel = new ThemasModel();
   }
 
-
+  public function themasPage()
+  {
+    include "view/themas/themas.php";
+  }
 
   public function __destruct()
   {

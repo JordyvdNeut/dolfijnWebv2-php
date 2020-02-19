@@ -8,7 +8,10 @@ class ContactController
     $this->ContactModel = new ContactModel();
   }
 
-
+  public function contactPage()
+  {
+    include "view/contact/contact.php";
+  }
 
   public function __destruct()
   {
