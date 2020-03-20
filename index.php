@@ -18,10 +18,10 @@ require_once "controller/c.RouterController.php";
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Icons -->
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Styling -->
   <?php $cssUrl = ROOT . "/assets/styling/style.css";  ?>
-  <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/assets/styling/style.css"> 
+  <link rel="stylesheet" type="text/css" href="<?= $cssUrl ?>"> 
   <!-- Title icon -->
   <link rel="shortcut icon" href="<?= ROOT ?>/assets/images/favicon.ico" type="image/x-icon">
 </head>
