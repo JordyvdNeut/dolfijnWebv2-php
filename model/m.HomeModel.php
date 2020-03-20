@@ -9,10 +9,10 @@ class HomeModel
     // $this->DataHandler = new DataHandler("https://cpanel1.cheesehosting.net:2083/", "mysql", "gastoude_websiteV2", "root", "");
   }
 
-  public function readInformatie()
+  public function readSubTitles()
   {
     try{
-    $sql = "SELECT * FROM informatie";
+    $sql = "SELECT title FROM `staatvooritems`";
     $result = $this->DataHandler->readsData($sql);
     return $result;
     } catch(exception $e) {
