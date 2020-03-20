@@ -10,6 +10,8 @@ class AgendaController
 
   public function agendaPage()
   {
+    $datums = $this->AgendaModel->readDatums();
+    $info = $this->AgendaModel->readInfo();
     include "view/agenda/agenda.php";
   }
 
