@@ -13,7 +13,6 @@ require_once "view/navigatie/header.php";
     ?>
   </table>
   <div class="col-5">
-    <?php var_dump($info);
-    ?> <?= $info ?>
+    <?= $info['text'] ?>
   </div>
 </section>

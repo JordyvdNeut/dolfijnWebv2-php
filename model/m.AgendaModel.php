@@ -23,7 +23,7 @@ class AgendaModel
   public function readInfo()
   {
     try{
-    $sql = "SELECT 'text' FROM `informatie` WHERE `info-id` = 1";
+    $sql = "SELECT text FROM `informatie` WHERE `info-id` = 1";
     $result = $this->DataHandler->readData($sql);
     return $result;
     } catch(exception $e) {
