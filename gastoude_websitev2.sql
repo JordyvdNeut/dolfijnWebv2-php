@@ -25,11 +25,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `agenda`
+-- Tabelstructuur voor tabel `openingstijden`
 --
 
-CREATE TABLE `agenda` (
-  `agenda-id` int(11) NOT NULL,
+CREATE TABLE `openingstijden` (
+  `openingstijden-id` int(11) NOT NULL,
   `dag` varchar(32) NOT NULL,
   `d` varchar(32) NOT NULL,
   `open` time NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `agenda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Gegevens worden geëxporteerd voor tabel `agenda`
+-- Gegevens worden geëxporteerd voor tabel `openingstijden`
 --
 
-INSERT INTO `agenda` (`agenda-id`, `dag`, `d`, `open`, `dicht`) VALUES
+INSERT INTO `openingstijden` (`openingstijden-id`, `dag`, `d`, `open`, `dicht`) VALUES
 (1, 'Maandag', 'ma', '07:00:00', '18:00:00'),
 (2, 'Dinsdag', 'di', '07:00:00', '18:00:00'),
 (3, 'Woensdag', 'wo', '07:00:00', '18:00:00'),
@@ -95,10 +95,10 @@ INSERT INTO `staatvooritems` (`id`, `title`, `text`) VALUES
 --
 
 --
--- Indexen voor tabel `agenda`
+-- Indexen voor tabel `openingstijden`
 --
-ALTER TABLE `agenda`
-  ADD PRIMARY KEY (`agenda-id`);
+ALTER TABLE `openingstijden`
+  ADD PRIMARY KEY (`openingstijden-id`);
 
 --
 -- Indexen voor tabel `informatie`
@@ -117,10 +117,10 @@ ALTER TABLE `staatvooritems`
 --
 
 --
--- AUTO_INCREMENT voor een tabel `agenda`
+-- AUTO_INCREMENT voor een tabel `openingstijden`
 --
-ALTER TABLE `agenda`
-  MODIFY `agenda-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `openingstijden`
+  MODIFY `openingstijden-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT voor een tabel `informatie`

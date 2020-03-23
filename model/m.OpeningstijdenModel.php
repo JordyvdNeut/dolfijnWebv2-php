@@ -12,7 +12,7 @@ class OpeningstijdenModel
   public function readDatums()
   {
     try{
-    $sql = "SELECT * FROM `agenda`";
+    $sql = "SELECT * FROM `openingstijden`";
     $result = $this->DataHandler->readsData($sql);
     return $result;
     } catch(exception $e) {
