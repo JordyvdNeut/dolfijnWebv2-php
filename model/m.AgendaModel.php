@@ -1,7 +1,7 @@
 <?php
 require_once "model/m.Datahandler.php";
 
-class AgendaModel
+class OpeningstijdenModel
 {
   public function __construct()
   {

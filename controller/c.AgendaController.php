@@ -1,16 +1,16 @@
 <?php
-require_once "model/m.AgendaModel.php";
+require_once "model/m.OpeningstijdenModel.php";
 
-class AgendaController
+class OpeningstijdenController
 {
   public function __construct()
   {
-    $this->AgendaModel = new AgendaModel();
+    $this->OpeningstijdenModel = new OpeningstijdenModel();
   }
 
-  public function agendaPage()
+  public function openingstijdenPage()
   {
-    include "view/agenda/agenda.php";
+    include "view/openingstijden/openingstijden.php";
   }
 
 
