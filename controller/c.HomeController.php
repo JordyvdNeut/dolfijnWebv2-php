@@ -10,6 +10,7 @@ class HomeController
 
   public function homePage()
   {
+    $subTitles = $this->HomeModel->readSubTitles();
     include "view/home/home.php";
   }
 

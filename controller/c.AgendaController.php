@@ -10,6 +10,8 @@ class OpeningstijdenController
 
   public function openingstijdenPage()
   {
+    $datums = $this->AgendaModel->readDatums();
+    $info = $this->AgendaModel->readInfo();
     include "view/openingstijden/openingstijden.php";
   }
 

@@ -52,8 +52,8 @@ class DataHandler
 
   public function readData($sql)
   {
-    $sth = $this->dbh->query($sql);
-    return $this->sth->fetch(PDO::FETCH_ASSOC);
+    $sth = $this->dbh->query($sql)->fetch(PDO::FETCH_ASSOC);
+    return $sth;
   }
   public function readsData($sql)
   {
@@ -62,8 +62,8 @@ class DataHandler
 
   public function createData($sql)
   {
-    $stm = $this->dbh->query($sql);
-    return $stm;
+    $sth = $this->dbh->query($sql);
+    return $sth;
   }
 
   public function updateData($sql)
