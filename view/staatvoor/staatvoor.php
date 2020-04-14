@@ -8,7 +8,7 @@ require_once "view/navigatie/header.php";
 <?php
   $html = "";
   foreach($staanvoor as $staatvoor){
-    $html .= "<div class='col-5'>";
+    $html .= "<div class='col-5' id='content-item'>";
     $html .= "<h2>$staatvoor[title]</h2>";
     $html .= "<p>$staatvoor[text]</p>";
     $html .= "</div>";
