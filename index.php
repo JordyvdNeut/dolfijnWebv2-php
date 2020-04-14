@@ -16,22 +16,24 @@ require_once "controller/c.RouterController.php";
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Styling -->
   <?php $cssUrl = ROOT . "/assets/styling/style.css";  ?>
-  <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/assets/styling/style.css"> 
+  <link rel="stylesheet" type="text/css" href="<?= $cssUrl ?>">
   <!-- Title icon -->
   <link rel="shortcut icon" href="<?= ROOT ?>/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
-<!-- Routing -->
+  <!-- Routing -->
   <?php
   $Router = new RouterController(ROOT);
-  if (isset($Router->error)){var_dump($e->getMessage());};
+  if (isset($Router->error)) {
+    var_dump($e->getMessage());
+  };
   ?>
 
 </body>
