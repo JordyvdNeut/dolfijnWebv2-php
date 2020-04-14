@@ -29,27 +29,6 @@ class DataHandler
     $this->dbh = null;
   }
 
-  // public function prepData($sql)
-  // {
-  //   try {
-  //     $stmt = $this->dbh->prepare($sql);
-  //     $stmt->execute();
-  //     // $stmt->debugDumpParams();
-  //   } catch (PDOException $e) {
-  //     echo "Error: " . $e;
-  //   }
-  //   return $stmt;
-  // }
-
-  // public function tableNameSanitize($value)
-  // {
-  //   if (!preg_match('/^[A-Za-z][A-Za-z0-9_]*$/', $value)) {
-  //     throw new AppSpecificSecurityException("Possible SQL injection attempt.");
-  //   } else {
-  //     return $value;
-  //   }
-  // }
-
   public function readData($sql)
   {
     $sth = $this->dbh->query($sql)->fetch(PDO::FETCH_ASSOC);
