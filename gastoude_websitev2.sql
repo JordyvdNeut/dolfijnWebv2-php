@@ -3,29 +3,44 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 23 mrt 2020 om 12:47
--- Serverversie: 10.1.30-MariaDB
--- PHP-versie: 7.0.27
+-- Generation Time: Apr 14, 2020 at 09:17 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.0.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `gastoude_websitev2`
 --
 
+CREATE DATABASE `gastoude_websitev2`;
+
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `openingstijden`
+-- Table structure for table `informatie`
+--
+
+CREATE TABLE `informatie` (
+  `info-id` int(11) NOT NULL,
+  `title` varchar(32) NOT NULL,
+  `text` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `informatie`
+--
+
+INSERT INTO `informatie` (`info-id`, `title`, `text`) VALUES
+(1, '', 'Eventueel af wijkende tijden in overleg.\r\nDe kinderen verschillen van leeftijd.(van 0 t/m 12 jaar)\r\nWe mogen maar maximaal 6 kinderen tegelijk opvangen daarom is er altijd tijd voor u kind.\r\n\r\nVakantie\r\nDe opvang is gesloten op reguliere feestdagen en 3 weken aan een gesloten weken in de zomervakantie, regio Midden-Nederland. In het weekend is de opvang gesloten.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `openingstijden`
 --
 
 CREATE TABLE `openingstijden` (
@@ -37,7 +52,7 @@ CREATE TABLE `openingstijden` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Gegevens worden geëxporteerd voor tabel `openingstijden`
+-- Dumping data for table `openingstijden`
 --
 
 INSERT INTO `openingstijden` (`openingstijden-id`, `dag`, `d`, `open`, `dicht`) VALUES
@@ -50,26 +65,7 @@ INSERT INTO `openingstijden` (`openingstijden-id`, `dag`, `d`, `open`, `dicht`) 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `informatie`
---
-
-CREATE TABLE `informatie` (
-  `info-id` int(11) NOT NULL,
-  `title` varchar(32) NOT NULL,
-  `text` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `informatie`
---
-
-INSERT INTO `informatie` (`info-id`, `title`, `text`) VALUES
-(1, '', 'Eventueel af wijkende tijden in overleg.\r\nDe kinderen verschillen van leeftijd.(van 0 t/m 12 jaar)\r\nWe mogen maar maximaal 6 kinderen tegelijk opvangen daarom is er altijd tijd voor u kind.\r\n\r\nVakantie\r\nDe opvang is gesloten op reguliere feestdagen en 3 weken aan een gesloten weken in de zomervakantie, regio Midden-Nederland. In het weekend is de opvang gesloten.');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `staatvooritems`
+-- Table structure for table `staatvooritems`
 --
 
 CREATE TABLE `staatvooritems` (
@@ -79,7 +75,7 @@ CREATE TABLE `staatvooritems` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Gegevens worden geëxporteerd voor tabel `staatvooritems`
+-- Dumping data for table `staatvooritems`
 --
 
 INSERT INTO `staatvooritems` (`id`, `title`, `text`) VALUES
@@ -91,50 +87,45 @@ INSERT INTO `staatvooritems` (`id`, `title`, `text`) VALUES
 (6, 'Creatief', '<p>Creatief bezig zijn vind ik erg leuk,<br />\r\n	we maken daarom ook vaak een leuk knutseltje bij een nieuw seizoen.<br />\r\n	<br />\r\n	Maar ook creatief om gaan met gewone situaties,<br />\r\n	buiten picknikken ipv. gewoon aan tafel.\r\n	</p>');
 
 --
--- Indexen voor geëxporteerde tabellen
+-- Indexes for dumped tables
 --
 
 --
--- Indexen voor tabel `openingstijden`
---
-ALTER TABLE `openingstijden`
-  ADD PRIMARY KEY (`openingstijden-id`);
-
---
--- Indexen voor tabel `informatie`
+-- Indexes for table `informatie`
 --
 ALTER TABLE `informatie`
   ADD PRIMARY KEY (`info-id`);
 
 --
--- Indexen voor tabel `staatvooritems`
+-- Indexes for table `openingstijden`
+--
+ALTER TABLE `openingstijden`
+  ADD PRIMARY KEY (`openingstijden-id`);
+
+--
+-- Indexes for table `staatvooritems`
 --
 ALTER TABLE `staatvooritems`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT voor geëxporteerde tabellen
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT voor een tabel `openingstijden`
---
-ALTER TABLE `openingstijden`
-  MODIFY `openingstijden-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT voor een tabel `informatie`
+-- AUTO_INCREMENT for table `informatie`
 --
 ALTER TABLE `informatie`
   MODIFY `info-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT voor een tabel `staatvooritems`
+-- AUTO_INCREMENT for table `openingstijden`
+--
+ALTER TABLE `openingstijden`
+  MODIFY `openingstijden-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `staatvooritems`
 --
 ALTER TABLE `staatvooritems`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
